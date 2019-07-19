@@ -1,0 +1,57 @@
+<div class="navbar navbar-light">
+	<div class="navbar-brand">
+		<span *ngIf="optionType.isHamburger" class="slide-bar-span d-inline-block align-top mr-2" (click)="showHideSlideBar()">
+			<i class="fas fa-bars fa-fw slide-bar-i" aria-hidden="true"></i>
+		</span>
+		<img src="../../assets/images/app_logo.png" width="auto" height="30" class="d-inline-block align-top ml-1 mr-1"
+			alt="">
+	</div>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+		aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+		(click)="showToggleMenu()">
+		<i class="fa fa-ellipsis-v"></i>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent" [ngClass]="{'toggle-border-top': isToggleMenu}">
+		<ul class="navbar-nav mr-auto">
+		</ul>
+		<div class="form-inline my-2 my-lg-0 float-right">
+			<button class="btn btn-outline-header-primary btn-sm btn-circle my-2 my-sm-0 mr-1 ml-2"
+				(click)="userSettingsPO.toggle()">
+				<span [popover]="userSettingsContent" containerClass="user-setting" placement="bottom"
+					#userSettingsPO="bs-popover" triggers="" container="body" [outsideClick]="true">{{loggedInUser.firstName | slice:0:1}}{{loggedInUser.lastName |
+					slice:0:1}}</span>
+			</button>
+		</div>
+	</div>
+</div>
+
+<ng-template #userSettingsContent>
+	<div class="card col-sm-12 rounded-0 p-0 border-top-0 border-left-0 border-right-0 mt-2 mb-1">
+		<div class="card-body row p-0">
+			<div class="float-left mx-3">
+				<span class="btn btn-outline-header-primary btn-circle btn-sm float-left mt-1">
+					{{loggedInUser.firstName | slice:0:1}}{{loggedInUser.lastName | slice:0:1}}</span>
+			</div>
+			<div class="float-left col">
+				<div class="row">
+					<div class="col-sm-12 pl-0">
+						<p class="float-left mb-0"> {{loggedInUser.firstName + ' ' + loggedInUser.lastName}}</p>
+					</div>
+					<div>
+						<div class="col-sm-12 pl-0 mt-2">
+							<small class="float-left mb-2 text-muted">View Profile</small>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row my-1 mx-0 py-1 px-3 user-settings-item">
+		<div class="float-left mx-2 text-muted">
+			<i class="fa fa-info-circle" aria-hidden="true"></i>
+		</div>
+		<div class="float-left mx-2">
+			<p class="m-0 ">App Version - {{appVersion}}</p>
+		</div>
+	</div>
+</ng-template>

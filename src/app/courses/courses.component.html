@@ -1,0 +1,19 @@
+<nav id="navPanel" class="bg-light border-bottom box-shadow fixed-top navbar-expand-lg">
+	<app-header (showHideSideBar)="isSideBar = !isSideBar" [optionType]="constants.COURSES_HEADER_OPTION"></app-header>
+</nav>
+<div class="container-fluid">
+	<div class="row">
+		<nav class="col-md-2 d-md-block bg-dark box-shadow sidebar "
+			[ngClass]="{'animated faster slideInLeft': isSideBar, 'animated faster slideOutLeft': !isSideBar}">
+			<div class="sidebar-sticky">
+				<app-sidebar [selectedMenuItem]="constants.COMP_NAME.courses"></app-sidebar>
+			</div>
+		</nav>
+		<main role="main" class="px-0" [ngClass]="{'col-md-10': isSideBar, 'col-md-12': !isSideBar}" #main
+			[style.padding-top.px]="paddingtop">
+			<div class="col-sm-12 col-md-12 mx-auto p-2">
+				<div #courseHost></div>
+			</div>
+		</main>
+	</div>
+</div>

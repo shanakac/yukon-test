@@ -1,0 +1,37 @@
+<div class="main-panel pt-0 pb-4">
+	<div class="container-fluid">
+		<div class="col-sm-12 px-0">
+			<button id="btn_edit_course" type="button" class="btn btn-sm btn-icon-only float-left mr-2"
+				(click)="back()">
+				<i class="fas fa-arrow-left"></i>
+			</button>
+			<h3 class="light-header">
+				<span class="badge "
+					[ngClass]="{'badge-warning': selectedCourse.courseType == 'elective' , 'badge-danger': selectedCourse.courseType != 'elective'}">
+					{{ selectedCourse.courseType }}
+				</span>
+				{{ selectedCourse.courseName }}
+			</h3>
+			<hr class="mt-0 mb-3" />
+		</div>
+		<div class="col-sm-12 px-0">
+			<p class="lead">
+				{{ selectedCourse.courseDescription }}
+			</p>
+			<p class="lead">
+				<span class="badge badge-dark">{{ selectedCourse.studentList.length }} Students</span>
+			</p>
+		</div>
+		<div class="card-deck">
+			<div *ngFor="let student of studentsList; let i=index" class="card col-sm-2 px-0">
+				<img src="../../../assets/images/user.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h6 class="card-title">
+						{{ student.firstName + ' ' + student.lastName }}
+					</h6>
+					<p class="card-text">{{ student.email }}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

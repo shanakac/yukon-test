@@ -1,0 +1,45 @@
+<div class="main-panel pt-0 pb-4">
+	<div class="container-fluid">
+		<div class="col-sm-12 px-0">
+			<button id="btn_edit_course" type="button" class="btn btn-sm btn-icon-only float-left mr-2"
+				(click)="back()">
+				<i class="fas fa-arrow-left"></i>
+			</button>
+			<h3 class="light-header">
+				{{ compTitle }}
+			</h3>
+			<hr class="mt-0 mb-3" />
+		</div>
+		<div class="col-sm-12 px-0">
+			<form>
+				<div class="form-group">
+					<label for="courseName">Course Name</label>
+					<input type="text" class="form-control" id="courseName" placeholder="Course Name">
+				</div>
+				<div class="form-group">
+					<label for="courseDescription">Course Description</label>
+					<textarea class="form-control" id="courseDescription" rows="3"></textarea>
+				</div>
+				<div class="form-group">
+					<label for="courseType">Course Type</label>
+					<select class="form-control" id="courseType">
+						<option>compulsory</option>
+						<option>elective</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="studentsList">Students</label>
+					<select multiple class="form-control" id="studentsList">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select>
+				</div>
+				<button type="submit" class="btn btn-primary btn-sm float-right" (click)="saveCourse()">Save</button>
+				<button type="submit" class="btn btn-secondary btn-sm float-right mx-2" (click)="back()">Cancel</button>
+			</form>
+		</div>
+	</div>
+</div>

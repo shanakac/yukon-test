@@ -1,0 +1,25 @@
+.list-item-bg {
+    background: transparent;
+}
+
+.list-cursor {
+    cursor: pointer;
+}
+
+.list-item-decorator {
+    width: 2px;
+    background-color: black;
+}
+
+.list-group {
+    display: -ms-flex;
+}
+
+.col-sm-12 {
+    flex: none
+}
+
+h6 {
+    font-size: 0.9rem !important;
+    font-weight: 400;
+}

@@ -1,0 +1,45 @@
+<div class="main-panel pt-0 pb-4">
+	<div class="container-fluid">
+		<div class="col-sm-12 px-0 align-self-end">
+			<div class="row align-items-center">
+				<div class="col-sm-10">
+					<h3 class="light-header">
+						Course List
+					</h3>
+				</div>
+				<div class="col-sm-2">
+					<button type="button" class="btn btn-primary btn-sm float-right" (click)="addNewCourse()">
+						Add New Course
+					</button>
+				</div>
+			</div>
+			<hr class="mt-0 mb-3" />
+		</div>
+		<div class="card-deck">
+			<div *ngFor="let course of courseList; let i=index" class="card col-sm-4 px-0"
+				(click)="courseDescription(course)">
+				<div class="card-body">
+					<h6 class="card-title">
+						<span class="badge "
+							[ngClass]="{'badge-warning': course.courseType == 'elective' , 'badge-danger': course.courseType != 'elective'}">
+							{{ course.courseType }}
+						</span>
+						{{ course.courseName }}
+					</h6>
+					<p class="card-text">{{ course.courseDescription }}</p>
+					<span class="badge badge-light float-left">{{ course.studentList.length }} Students</span>
+				</div>
+				<div class="card-footer text-muted custom-card-footer">
+					<button id="btn_edit_course" type="button" class="btn btn-sm btn-icon-only float-right"
+						(click)="$event.stopPropagation();courseEdit(course)">
+						<i class="fas fa-edit"></i>
+					</button>
+					<button id="btn_delete_course" type="button" class="btn btn-sm btn-icon-only float-right"
+						(click)="courseDelete(course)">
+						<i class="far fa-trash-alt"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

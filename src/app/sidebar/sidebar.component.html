@@ -1,0 +1,22 @@
+<div>
+    <div class="pb-2 px-0 mt-2">
+        <ul class="col-sm-12 px-0 py-2 list-group mt-2">
+            <li class="list-group-item border-0 rounded-0 px-0 py-3 list-item-bg list-cursor"
+                [ngClass]="{'sidebar-item-active-dark': selectedMenuItem == componentNames.courses, 'custom-list-item-dark': selectedMenuItem != componentNames.courses}"
+                (click)="sideItemClick(componentNames.courses)">
+                <h6 class="flaot-left ml-4 mb-0 sidebar-list-text">
+                    <i class="fas fa-scroll mr-2"></i>
+                    Courses
+                </h6>
+            </li>
+            <li class="list-group-item border-0 rounded-0 px-0 py-3 list-item-bg list-cursor"
+                [ngClass]="{'sidebar-item-active-dark': selectedMenuItem == componentNames.students, 'custom-list-item-dark': selectedMenuItem != componentNames.students}"
+                (click)="sideItemClick(componentNames.students)">
+                <h6 class="flaot-left ml-4 mb-0 sidebar-list-text">
+                    <i class="fas fa-user-graduate mr-2"></i>
+                    Students
+                </h6>
+            </li>
+        </ul>
+    </div>
+</div>

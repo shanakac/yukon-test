@@ -1,0 +1,133 @@
+$primary-color-acent: #F7C200b6;
+$primary-color: #F7C200;
+
+.slide-bar-span {
+    cursor: pointer;
+}
+
+.badge-notify {
+    position: relative;
+    top: -12px !important;
+    left: -3px !important;
+}
+
+.badge-span {
+    cursor: pointer
+}
+
+.vertical-line {
+    width: 1px;
+    border-left: 1px solid #999;
+    height: 30px;
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+}
+
+.btn-circle.btn-xl {
+    width: 70px;
+    height: 70px;
+    padding: 10px 16px;
+    border-radius: 35px;
+    font-size: 24px;
+    line-height: 1.33;
+}
+
+
+
+.toggle-border-top {
+    border-top: 1px solid #dee2e6 !important;
+}
+
+.content-show-noti {
+    visibility: visible;
+    display: inline block;
+}
+
+.notification-btn {
+    color: #343a40;
+    background-color: transparent
+}
+
+.user-settings-item {
+    cursor: pointer;
+    color: #212121 !important;
+}
+
+.user-settings-item:hover,
+.user-settings-item:active,
+.user-settings-item:visited {
+    color: #FAFAFA !important;
+    background-color: $primary-color !important;
+}
+
+.menu-content-span {
+    text-align: center;
+}
+
+.menu-content-item P {
+    font-size: 0.7rem;
+    color: #757575;
+    font-weight: 600;
+}
+
+.menu-content-item {
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.menu-content-item:hover,
+.menu-content-item:active,
+.menu-content-item:visited {
+    color: $primary-color-acent !important; 
+    background-color: #EEEEEE !important;
+}
+
+.floating-search {
+    position: absolute;
+    top: 8px;
+    left: 25%;
+    width: 50%;
+}
+
+//override button outline primary
+.btn-outline-header-primary:hover,
+.btn-outline-header-primary:active,
+.btn-outline-header-primary:visited {
+    color: #FFFFFF !important;
+    background-color: $primary-color !important;
+    border-color: $primary-color !important;
+}
+
+.btn-outline-header-primary:disabled {
+   color: #fff;
+   background-color: #6c757d;
+   border-color: #6c757d;
+}
+
+.btn-outline-header-primary:disabled:hover {
+  cursor: not-allowed
+}
+
+.btn-outline-header-primary {
+    color: #212121 !important;
+    background-color: #FFFFFF !important;
+    border-color: #212121 !important;
+}
+
+//hamburger button
+.slide-bar-span:hover,
+.slide-bar-span:active,
+.slide-bar-span:visited {
+    color: $primary-color !important;
+}
+
+

@@ -1,0 +1,210 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+$primary-color-acent: #F7C200b6;
+$primary-color: #F7C200;
+$dark-color: #212121;
+
+
+//override button primary
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+    color: #FFFFFF !important;
+    background-color: $primary-color-acent !important;
+    border-color: $primary-color-acent !important;
+}
+
+.btn-primary:disabled {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-primary:disabled:hover {
+    cursor: not-allowed
+}
+
+.btn-primary {
+    color: #ffffff !important;
+    background-color: $primary-color !important;
+    border-color: $primary-color !important;
+}
+
+//override button outline primary
+.btn-outline-primary:hover,
+.btn-outline-primary:active,
+.btn-outline-primary:visited {
+    color: #FFFFFF !important;
+    background-color: $primary-color !important;
+    border-color: $primary-color !important;
+}
+
+.btn-outline-primary:disabled {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-outline-primary:disabled:hover {
+    cursor: not-allowed
+}
+
+.btn-outline-primary {
+    color: $primary-color !important;
+    background-color: #FFFFFF !important;
+    border-color: $primary-color !important;
+}
+
+.link-primary {
+    color: $primary-color !important;
+    cursor: pointer;
+}
+
+.link-primary:hover,
+.link-primary:active,
+.link-primary:visited {
+    color: $primary-color-acent !important;
+    text-decoration: underline !important;
+    cursor: pointer;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.container {
+    min-height: 100%;
+}
+
+body {
+    background-color: #f7f9fb;
+    font-size: 14px;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.main-panel {
+    padding-top: 54px;
+    height: 100%
+}
+
+//sidebar styles
+.sidebar-item-active-light {
+    color: $primary-color !important;
+    background-color: #F5F5F5 !important;
+    border-left: 3px solid $primary-color !important;
+}
+
+.sidebar-item-active-dark {
+    color: $primary-color !important;
+    background-color: #212121 !important;
+    border-left: 3px solid $primary-color !important;
+}
+
+.sidebar-item-active-dark:hover,
+.sidebar-item-active-dark:active,
+.sidebar-item-active-dark:visited {
+    color: #FFFFFF !important;
+    background-color: #212121 !important;
+    border-left: 3px solid $primary-color !important;
+}
+
+.custom-list-item-light:hover,
+.custom-list-item-light:active,
+.custom-list-item-light:visited {
+    color: #616161 !important;
+    background-color: #F5F5F5 !important;
+    border-left: 3px solid $primary-color !important;
+}
+
+.custom-list-item-dark {
+    color: #BDBDBD !important;
+}
+
+.custom-list-item-dark:hover,
+.custom-list-item-dark:active,
+.custom-list-item-dark:visited {
+    color: #F5F5F5 !important;
+    background-color: #212121 !important;
+    border-left: 3px solid $primary-color !important;
+}
+
+.sidebar-close-dark {
+    color: #F5F5F5 !important;
+}
+
+.sidebar-close-dark:hover,
+.sidebar-close-dark:active,
+.sidebar-close-dark:visited {
+    color: $primary-color !important;
+}
+
+.sub-menu-item-list {
+    color: #E0E0E0 !important;
+    background-color: #263238 !important;
+}
+
+.sub-menu-item-list:hover,
+.sub-menu-item-list:active,
+.sub-menu-item-list:visited {
+    color: #F5F5F5 !important;
+    background-color: #212121 !important;
+    border-left: 3px solid $primary-color !important;
+}
+
+.animate-arrow-0 {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -webkit-transition: -webkit-transform .2s ease-in-out;
+    -ms-transition: -ms-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+}
+
+.animate-arrow-180 {
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -webkit-transition: -webkit-transform .2s ease-in-out;
+    -ms-transition: -ms-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+}
+
+//sidebar styles
+
+//icon only btn
+.btn-icon-only:hover,
+.btn-icon-only:active,
+.btn-icon-only:visited {
+    color: $primary-color !important;
+}
+
+.btn-icon-only:disabled {
+    opacity: 0.3 !important;
+}
+
+.btn-icon-only:disabled:hover {
+    cursor: not-allowed;
+    color: #ffffff !important;
+}
+
+.btn-icon-only {
+    color: $dark-color !important;
+}
+//icon only button
+
+//card styles
+.custom-card-footer {
+    background-color: transparent !important;
+}
+//card styles
+
+//header
+.light-header {
+    font-weight: 200
+}
+//header
