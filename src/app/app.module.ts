@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //bootstrap components
 import { PopoverModule } from 'ngx-bootstrap/popover';
@@ -36,6 +37,8 @@ import { StudentAddEditComponent } from './students/student-add-edit/student-add
 		BrowserModule,
 		AppRoutingModule,
 		PopoverModule.forRoot(),
+		FormsModule,
+		ReactiveFormsModule
 	],
 	entryComponents: [
 		CourseDetailComponent,

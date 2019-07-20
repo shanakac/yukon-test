@@ -15,24 +15,29 @@
             </div>
             <hr class="mt-0 mb-3" />
         </div>
-        <div class="card-deck">
-            <div *ngFor="let student of studentList; let i=index" class="card col-sm-2 px-0"
+        <div class="card-columns">
+            <div *ngFor="let student of studentList; let i=index" class="card px-0"
                 (click)="studentDescription(student)">
-                <img src="../../../assets/images/user.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
+                <ng-container *ngIf="student.gender == 'male'; else elseTemplate">
+                    <img src="../../../assets/images/user-man.svg" class="card-img-top" alt="...">
+                </ng-container>
+                <ng-template #elseTemplate>
+                    <img src="../../../assets/images/user-woman.svg" class="card-img-top" alt="...">
+                </ng-template>
+                <div class="card-body card-click">
                     <h6 class="card-title">
                         {{ student.firstName + ' ' + student.lastName }}
                     </h6>
                     <p class="card-text">{{ student.email }}</p>
                     <span class="badge badge-light float-left">{{ student.courseList.length }} Courses</span>
                 </div>
-                <div class="card-footer text-muted custom-card-footer">
+                <div class="card-footer text-muted custom-card-footer p-0">
                     <button id="btn_edit_student" type="button" class="btn btn-sm btn-icon-only float-right"
-                        (click)="studentEdit(student)">
+                        (click)="$event.stopPropagation();studentEdit(student)">
                         <i class="fas fa-edit"></i>
                     </button>
                     <button id="btn_delete_student" type="button" class="btn btn-sm btn-icon-only float-right"
-                        (click)="studentDelete(student)">
+                        (click)="$event.stopPropagation();studentDelete(student)">
                         <i class="far fa-trash-alt"></i>
                     </button>
                 </div>

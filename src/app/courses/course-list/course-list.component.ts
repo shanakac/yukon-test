@@ -32,6 +32,7 @@ export class CourseListComponent implements OnInit {
 	 */
 	public courseEdit(course: Course) {
 		this.dataService.selectedCourse = course
+		this.clService.changeComponentEmit(Constants.COMP_NAME.course_add_edit)
 	}
 
 	/**

@@ -18,6 +18,7 @@ export class DataLoaderService {
 			firstName: 'Shanaka',
 			lastName: 'Chethana',
 			email: 'shanakachethana@gmail.com',
+			gender: 'male',
 			courseList: [
 				{
 					id: 'cou_001'
@@ -35,6 +36,7 @@ export class DataLoaderService {
 			firstName: 'Ushani',
 			lastName: 'Bonifus',
 			email: 'ushanibonifus@gmail.com',
+			gender: 'female',
 			courseList: [
 				{
 					id: 'cou_001'
@@ -49,6 +51,7 @@ export class DataLoaderService {
 			firstName: 'Jon',
 			lastName: 'Snow',
 			email: 'jonsnow@gmail.com',
+			gender: 'male',
 			courseList: [
 				{
 					id: 'cou_002'
@@ -120,7 +123,6 @@ export class DataLoaderService {
 	//update course
 	public updateCourse(course: Course) {
 		let tempCourse: Course = this.coursesList.find(x => x.id == course.id);
-
 	}
 
 	//add new course
@@ -171,5 +173,16 @@ export class DataLoaderService {
 			studentList.push(tempStudent)
 		});
 		return studentList
+	}
+
+	/**
+	 * get all courses
+	 */
+	public getAllCourses(): any {
+		return this.coursesList
+	}
+
+	public getAllStudents(): any {
+		return this.studentsList
 	}
 }

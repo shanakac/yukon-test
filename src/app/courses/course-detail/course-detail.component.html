@@ -21,10 +21,16 @@
 			<p class="lead">
 				<span class="badge badge-dark">{{ selectedCourse.studentList.length }} Students</span>
 			</p>
+			<hr class="my-3" />
 		</div>
-		<div class="card-deck">
-			<div *ngFor="let student of studentsList; let i=index" class="card col-sm-2 px-0">
-				<img src="../../../assets/images/user.jpg" class="card-img-top" alt="...">
+		<div class="card-columns mt-2">
+			<div *ngFor="let student of studentsList; let i=index" class="card px-0">
+				<ng-container *ngIf="student.gender == 'male'; else elseTemplate">
+                    <img src="../../../assets/images/user-man.svg" class="card-img-top" alt="...">
+                </ng-container>
+                <ng-template #elseTemplate>
+                    <img src="../../../assets/images/user-woman.svg" class="card-img-top" alt="...">
+                </ng-template>
 				<div class="card-body">
 					<h6 class="card-title">
 						{{ student.firstName + ' ' + student.lastName }}
